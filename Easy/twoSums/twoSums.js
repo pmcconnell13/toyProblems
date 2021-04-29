@@ -39,3 +39,19 @@ var twoSum = function(nums, target) {
   return result
 };
 
+///////////////////////Optimal hash solution/////////////////////////////
+var twoSum = function(nums, target) {
+  //create object
+   //loop through nums
+     //if target - current val exists in object
+       //return current matching index with current index
+     //else
+       //add current val to object with index
+   var obj = {};
+   for (var i = 0; i < nums.length; i++) {
+     if (obj[target - nums[i]] >= 0) {
+        return [obj[target - nums[i]], i]
+     }
+     obj[nums[i]] = i
+   }
+};
