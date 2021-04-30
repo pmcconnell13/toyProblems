@@ -182,6 +182,25 @@ class LinkedList {
     return currentNode;
   }
 
+  reverse() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    var first = this.head;
+    this.tail = this.head;
+    var second = first.next;
+    while(second) {
+      var temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+
+    return this
+  }
+
 }
 
 class Node {
@@ -202,3 +221,4 @@ myLinkedList.insert(1, 12);
 myLinkedList.remove(myLinkedList.length - 1);
 console.log(myLinkedList.printList());
 console.log(myLinkedList)
+console.log(myLinkedList.reverse())
