@@ -184,7 +184,7 @@ class LinkedList {
 
   reverse() {
     if (!this.head.next) {
-      return this.head;
+      return this.head
     }
     var first = this.head;
     this.tail = this.head;
@@ -197,7 +197,6 @@ class LinkedList {
     }
     this.head.next = null;
     this.head = first;
-
     return this
   }
 
@@ -213,7 +212,7 @@ class Node {
 
 var myLinkedList = new LinkedList(5);
 myLinkedList.append(6);
-myLinkedList.append(7);
+myLinkedList.append(8);
 myLinkedList.prepend(4);
 myLinkedList.prepend(2);
 myLinkedList.append(50);
