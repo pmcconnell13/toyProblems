@@ -1,7 +1,50 @@
+// class Node {
+//   constructor(value) {
+//       this.value = value,
+//       this.next = null
+//   }
+// }
+
+// class Stack {
+//   constructor() {
+//     this.top = null;
+//     this.bottom = null;
+//     this.length = 0;
+//   }
+//   peek() {
+//     return this.top;
+//   }
+//   pop() {
+//     if (!this.top) {
+//       return null;
+//     }
+//     if (this.length === 1) {
+//       this.bottom = null;
+//     }
+//     var pointer = this.top;
+//     this.top = this.top.next;
+//     this.length--
+//     return this
+//   }
+//   push(value) {
+//     var newNode = new Node(value);
+//     if (this.length === 0) {
+//       this.top = newNode;
+//       this.bottom = newNode
+//     } else {
+//       var pointer = this.top;
+//       this.top = newNode;
+//       this.top.next = pointer;
+//     }
+//     this.length++
+//     return this
+//   }
+// }
+
 class Node {
   constructor(value) {
-      this.value = value,
-      this.next = null
+    this.value = value;
+    this.next = null;
   }
 }
 
@@ -11,32 +54,35 @@ class Stack {
     this.bottom = null;
     this.length = 0;
   }
+
   peek() {
     return this.top;
   }
+
   pop() {
     if (!this.top) {
-      return null;
+      return null
     }
     if (this.length === 1) {
       this.bottom = null;
     }
     var pointer = this.top;
     this.top = this.top.next;
-    this.length--
-    return this
+    this.length--;
+    return this;
   }
+
   push(value) {
     var newNode = new Node(value);
     if (this.length === 0) {
       this.top = newNode;
-      this.bottom = newNode
+      this.bottom = newNode;
     } else {
       var pointer = this.top;
       this.top = newNode;
       this.top.next = pointer;
     }
-    this.length++
+    this.length++;
     return this
   }
 }
