@@ -12,5 +12,6 @@ function insertSort(array) {
   }
   return array
 }
+//return
 
 console.log(insertSort([99, 108, 45, 3, 0, 12, 94, 155, 1, 234]))
