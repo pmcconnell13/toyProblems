@@ -7,8 +7,8 @@ function findWithRecursion(number){
 
 function findWithIteration(number){
   var answer = 1
-  for (var i = 2; i < number; i++) {
-    answer += answer * (i + 1)
+  for (var i = 2; i <= number; i++) {
+    answer = answer * i
   }
   return answer
 }
