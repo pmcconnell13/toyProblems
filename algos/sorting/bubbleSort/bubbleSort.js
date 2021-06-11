@@ -18,18 +18,17 @@ function bubbleSort(array) {
 	var arrayLength = array.length;
   //loop through array
 	for (var i = 0; i < array.length; i++) {
-		 //if current value is greater than next value
-		 for (var j = 0; j < array.length; j++) {
+		for (var j = 0; j < array.length; j++) {
+			 //if current value is greater than next value
 			 if (array[j] >= array[j + 1]) {
+				 //swap them
 				 var temp = array[j + 1];
 				 array[j + 1] = array[j];
 				 array[j] = temp;
 			 }
 		 }
 	}
-	    //swap them
-	  //subtract 1 from array length when it gets to end
 	return array
 }
 
-console.log(bubbleSort([3, 2, 6, 4, 9, 8, 8, 3]))
+console.log(bubbleSort([3, 2, 6, 4, 1, 9, 8, 8, 3]))
