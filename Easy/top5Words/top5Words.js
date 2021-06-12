@@ -1,9 +1,10 @@
 var string = 'I love to type. I dance and - dance and dance %, I dance. Dancing i Dance makes me love my life and I love that. I love to dance.';
 
 var top5 = function (string) {
-  var removedPunctuation = string.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+  var removedPunctuation = string.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'').toLowerCase();
   //split regex at space
-  var splitString = removedPunctuation.split(' ');
+  var removeLine = removedPunctuation.replace(/\n/g, '');
+  var splitString = removeLine.split(' ');
 
   var storage = {};
   var result = [];
@@ -33,6 +34,7 @@ var top5 = function (string) {
       result.push({word: key, frequency: storage[key]})
     }
   }
+
   return result;
 }
 

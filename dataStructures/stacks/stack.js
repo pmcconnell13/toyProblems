@@ -63,7 +63,7 @@ class Stack {
     if (!this.top) {
       return null
     }
-    if (this.length === 1) {
+    if (this.top === this.bottom) {
       this.bottom = null;
     }
     var pointer = this.top;
