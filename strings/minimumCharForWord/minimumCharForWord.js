@@ -1,9 +1,4 @@
 function minimumCharactersForWords(words) {
-  //loop over array
-	  //loop over string value
-	    //if character doesn't exist in storage object
-	    //add it to the storage object and add to result array
-	  //return result
 	var maxFrequency = {};
 	  for (var i = 0; i < words.length; i++) {
       var charFrequencies = countFrequency(words[i]);
