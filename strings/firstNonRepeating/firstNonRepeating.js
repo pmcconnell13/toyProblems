@@ -25,3 +25,4 @@ function firstNonRepeatingCharacter(string) {
   return -1;
 }
 
+//check in 
