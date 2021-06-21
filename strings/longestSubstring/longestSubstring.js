@@ -42,4 +42,4 @@ function longestSubstring (string, k) {
 };
 
 console.log(longestSubstring('eceba', 2));
-console.log(longestSubstring('aabaca', 2));
+console.log(longestSubstring('', 2));
