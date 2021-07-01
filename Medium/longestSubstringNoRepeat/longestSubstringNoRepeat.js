@@ -1,7 +1,4 @@
-/**
- * @param {string} s
- * @return {number}
- */
+
  var lengthOfLongestSubstring = function(s) {
   //create storage object
   var storage = {};
@@ -18,14 +15,16 @@
           storage[currentEl] = 1;
      //increase current length by 1
           currentLength++;
+          console.log(storage)
       } else {
       //if it does exist
      //create new storage object
       storage = {}
+      storage[currentEl] = 1
      //make longest variable result of math.max longest, current
       longestSub = Math.max(longestSub, currentLength);
      //current = 0
-      currentLength = 0;
+      currentLength = 1;
       }
   }
  return longestSub;
@@ -33,17 +32,19 @@
 
 };
 
-Input: s = "abcabcbb"
-Output: 3
-Explanation: The answer is "abc", with the length of 3.
-Example 2:
+console.log(lengthOfLongestSubstring("pwwkew"));
 
-Input: s = "bbbbb"
-Output: 1
-Explanation: The answer is "b", with the length of 1.
-Example 3:
+// Input: s = "abcabcbb"
+// Output: 3
+// Explanation: The answer is "abc", with the length of 3.
+// Example 2:
 
-Input: s = "pwwkew"
-Output: 3
-Explanation: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+// Input: s = "bbbbb"
+// Output: 1
+// Explanation: The answer is "b", with the length of 1.
+// Example 3:
+
+// Input: s = "pwwkew"
+// Output: 3
+// Explanation: The answer is "wke", with the length of 3.
+// Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
