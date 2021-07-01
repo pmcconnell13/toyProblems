@@ -10,4 +10,5 @@ var removeElement = function(nums, val) {
 
 console.log(removeElement([0,1,2,2,3,0,4,2], 2));
 
-console.log(removeElement([0,1,2,2,3,0,4,2], 4))
+console.log(removeElement([0,1,2,2,3,0,4,2], 4));
+
