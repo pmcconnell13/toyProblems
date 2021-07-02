@@ -53,7 +53,7 @@ Output: 3
 Example 2:
 
 Input: root = [1,null,2]
-Output: 2
+Output: 2;
 Example 3:
 
 Input: root = []
