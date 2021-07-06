@@ -7,72 +7,70 @@
  * }
  */
 /**
- * @param {TreeNode} root
- * @return {boolean}
- */
- var isValidBST = function(root) {
-  if (!root) {
-      return;
-  }
-  var currentNode = root;
-  var list = [];
-  var queue = [];
-  queue.push(currentNode);
+//  * @param {TreeNode} root
+//  * @return {boolean}
+//  */
+//  var isValidBST = function(root) {
+//   if (!root) {
+//       return;
+//   }
+//   var currentNode = root;
+//   var list = [];
+//   var queue = [];
+//   queue.push(currentNode);
 
-  while (queue.length > 0) {
+//   while (queue.length > 0) {
 
-    currentNode = queue.shift();
+//     currentNode = queue.shift();
 
-    // console.log('currentNode', currentNode.val)
+//     // console.log('currentNode', currentNode.val)
 
-    list.push(currentNode.val);
-      // console.log('list', list)
+//     list.push(currentNode.val);
+//       // console.log('list', list)
 
-      console.log(root.val)
+//       console.log(root.val)
 
-    if (currentNode.left) {
-        if (currentNode.left.val < currentNode.val && currentNode.left.val < root.val) {
-            queue.push(currentNode.left);
-        } else {
-            return false;
-        }
-    }
-    if (currentNode.right) {
-        if (currentNode.right.val > root.val && currentNode.right.val > root.val) {
-            queue.push(currentNode.right);
-        } else {
-            return false;
-        }
-    }
-      // console.log('queue', queue)
-  }
-  return true
-};
+//     if (currentNode.left) {
+//         if (currentNode.left.val < currentNode.val && currentNode.left.val < root.val) {
+//             queue.push(currentNode.left);
+//         } else {
+//             return false;
+//         }
+//     }
+//     if (currentNode.right) {
+//         if (currentNode.right.val > root.val && currentNode.right.val > root.val) {
+//             queue.push(currentNode.right);
+//         } else {
+//             return false;
+//         }
+//     }
+//       // console.log('queue', queue)
+//   }
+//   return true
+// };
 
 
 ///DFS pre order
 
 var isValidBST = function(root) {
-  var list = [];
+  var isValidBST = function(root) {
+    if (!root) {
+        return true; // Sanity check for passing test case '[]'
+    }
 
-  var innerF = function (node, list) {
-    list.push(node.val);
-    console.log(list)
-    if (node.left) {
-        if (node.left.val < node.val) {
-            innerF(node.left, list);
-        } else {
-            return false;
+    function helper(root, min, max) {
+        if (!root) {
+            return true; // We hit the end of the path
         }
-    }
-    if (node.right) {
-        if (node.right.val > node.val) {
-            innerF(node.right, list);
-        } else {
-            return false;
+
+        if ((min !== null && root.val <= min) || (max !== null && root.val >= max)) {
+            return false; // current node's val doesn't satisfy the BST rules
         }
+
+        // Continue to scan left and right
+        return helper(root.left, min, root.val) && helper(root.right, root.val, max);
     }
-      return true
-  }
-  return innerF(root, list)
+
+    return helper(root, null, null);
+};
 };
