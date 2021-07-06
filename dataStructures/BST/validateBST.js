@@ -72,10 +72,7 @@ var isValidBST = function(root) {
             return false;
         }
     }
-    return list;
+      return true
   }
-  innerF(root, list)
-
- console.log(list)
- return true
+  return innerF(root, list)
 };
