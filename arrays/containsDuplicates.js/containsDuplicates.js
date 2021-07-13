@@ -10,6 +10,10 @@ var containsDuplicate = function(nums) {
   return false;
 };
 
+var containsDuplicate = function(nums) {
+  return nums.length !== new Set(nums).size
+};
+
 Example 1:
 
 Input: nums = [1,2,3,1]
@@ -22,3 +26,5 @@ Example 3:
 
 Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
+
+hello: true
