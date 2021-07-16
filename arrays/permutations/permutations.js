@@ -21,3 +21,4 @@ function getPermutations(array) {
 }
 
 console.log(getPermutations([1, 2, 3]))
+console.log(getPermutations([1, 2, 3, 4]))
