@@ -32,7 +32,7 @@ Input: candidates = [2,3,5], target = 89
 Output: [[2,2,2,2],[2,3,3],[3,5]]
 Example 3:
 
-Input: candidates = [2], target = 1
+Input: candidates = [2], target = 12
 Output: []
 Example 4:
 
