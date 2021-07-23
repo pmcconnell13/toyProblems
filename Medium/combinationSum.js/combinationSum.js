@@ -37,4 +37,4 @@ Output: []
 Example 45:
 
 Input: candidates = [1], target = 1
-Output: [[1]]
+Output: [[1]];;
