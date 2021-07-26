@@ -56,4 +56,22 @@ var twoSum = function(nums, target) {
    }
 };
 
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+ var twoSum = function(nums, target) {
+  const container = {};
+  for (let i = 0; i < nums.length; i++) {
+      if (target - nums[i] in container) {
+          return [i, container[target - nums[i]]]
+      } else {
+         container[nums[i]] = i
+  }
+}
+
+  return [];
+};
+
 //come back to this later
