@@ -3,21 +3,19 @@ var maxProduct = function(nums) {
   let currentMax = 1;
   let currentMin = 1;
 
+
   for(let i = 0; i < nums.length; i++) {
       let prevMax = currentMax;
-      console.log('prevMax', prevMax)
       currentMax = Math.max(nums[i], prevMax * nums[i], currentMin * nums[i]);
       currentMin = Math.min(nums[i], prevMax * nums[i], currentMin * nums[i]);
-      console.log('currentMax', currentMax)
-      console.log('currentMin', currentMin)
       max = Math.max(currentMax, max);
-      console.log('max', max)
   }
 
   return max;
 };
 
-console.log(maxProduct([-2, 3, -4]))
+console.log(maxProduct([-2, 3, -4]));
+console.log(maxProduct([-2, 3, -4]));
 
 // Example 1:
 
