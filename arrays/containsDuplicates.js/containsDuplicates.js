@@ -9,9 +9,12 @@ var containsDuplicate = function(nums) {
   }
   return false;
 };
-
-var containsDuplicate = function(nums) {
-  return nums.length !== new Set(nums).size
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+ var containsDuplicate = function(nums) {
+  return new Set(nums).size !== nums.length;
 };
 
 Example 1:
