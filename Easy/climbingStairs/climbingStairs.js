@@ -14,10 +14,6 @@
   return steps[n]
 };
 
-/**
- * @param {number} n
- * @return {number}
- */
  var climbStairs = function(n) {
   let dp = [0, 1, 2];
   for (let i = 3; i <= n; i++) {
