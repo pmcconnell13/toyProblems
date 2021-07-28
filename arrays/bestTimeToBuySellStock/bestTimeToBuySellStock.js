@@ -19,14 +19,18 @@
 };
 
 //o(n) time
-var maxProfit = function(prices) {
-    let result = 0;
-    let min = prices[0];
-    for(let i = 1; i < prices.length; i++) {
-        min = Math.min(prices[i], min);
-        result = Math.max(result, prices[i] - min);
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+ var maxProfit = function(prices) {
+    let maxP = 0;
+    let currentMin = prices[0];
+    for (let i = 1; i < prices.length; i++) {
+      currentMin = Math.min(currentMin, prices[i]);
+      maxP = Math.max(prices[i] - currentMin, maxP)
     }
-    return result;
+    return maxP
 };
 
 Input: prices = [7,1,5,3,6,4]
