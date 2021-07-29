@@ -4,7 +4,7 @@ function findMin(nums) {
   while (l < r) {
     const m = Math.floor((l + r) / 2);
     if (nums[m] > nums[r]) l = m + 1;
-    else r = m;
+    else r = m - 1;
   }
   return nums[l];
 }
@@ -21,4 +21,4 @@ Example 3:
 
 Input: nums = [11,13,15,17]
 Output: 11
-Explanation: The original array was [11,13,15,17] and it was rotated 4 times. 
+Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
