@@ -23,15 +23,27 @@
  * @param {number[]} prices
  * @return {number}
  */
- var maxProfit = function(prices) {
+//  var maxProfit = function(prices) {
+//     let maxP = 0;
+//     let currentMin = prices[0];
+//     for (let i = 1; i < prices.length; i++) {
+//       currentMin = Math.min(currentMin, prices[i]);
+//       maxP = Math.max(prices[i] - currentMin, maxP)
+//     }
+//     return maxP
+// };
+
+
+let maxProfit = function (prices) {
     let maxP = 0;
     let currentMin = prices[0];
     for (let i = 1; i < prices.length; i++) {
-      currentMin = Math.min(currentMin, prices[i]);
-      maxP = Math.max(prices[i] - currentMin, maxP)
+        currentMin = Math.min(currentMin, prices[i]);
+        maxP = Math.max(maxP, prices[i] - currentMin)
     }
     return maxP
-};
+}
+
 
 Input: prices = [7,1,5,3,6,4]
 Output: 5
