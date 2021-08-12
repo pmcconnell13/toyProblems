@@ -30,3 +30,5 @@ Example 3:
 
 Input: root = [2,1], p = 2, q = 1
 Output: 2
+
+//reattempted
