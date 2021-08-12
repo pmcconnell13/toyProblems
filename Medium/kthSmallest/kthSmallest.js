@@ -1,18 +1,14 @@
 var kthSmallest = function(root, k) {
-    let array = [];
+  let queue = [];
 
-    const dfs = (node) => {
-      if (!node) {
-        return
-      }
-        console.log(array)
-      if (node.left) dfs(node.left);
-      array.push(node.val)
-      if (node.right) dfs(node.right);
-    }
-    dfs(root);
-
-        return array[k - 1];
+  let innerF = (root) => {
+    if (!root) return;
+    if (root.left) innerF(root.left);
+    queue.push(root.val)
+    if (root.right) innerF(root.right);
+  }
+  innerF(root);
+  return queue[k - 1]
 };
 
 Given the root of a binary search tree, and an integer k, return the kth (1-indexed) smallest element in the tree.
