@@ -74,3 +74,4 @@ var isValidBST = function(root) {
     return helper(root, null, null);
 };
 };
+//reattempted
