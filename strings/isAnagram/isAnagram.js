@@ -16,34 +16,24 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
-  var container = {};
-
-if (s.length !== t.length) {
-    return false;
-}
-
-for (var i = 0; i < s.length; i++) {
-  if (!container[s[i]]) {
-      container[s[i]] = 1
-  } else {
-      container[s[i]]++
-  }
-}
-
-for (var j = 0; j < t.length; j++) {
-  if (!container[t[j]]) {
-      return false
-  } else {
-      container[t[j]]--
-      if (container[t[j]] < 0) {
-          return false;
+  var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false
+    let storage = {};
+    for (let i = 0; i < s.length; i++) {
+      if (!storage[s[i]]) {
+        storage[s[i]] = 1;
+      } else {
+          storage[s[i]]++
       }
-  }
-}
-console.log(container)
-return true
-
+    }
+    for (let i = 0; i < t.length; i++) {
+      if (!storage[t[i]]) {
+          return false
+      } else {
+          storage[t[i]]--
+      }
+    }
+    return true;
 };
 
 console.log(isAnagram("anagram", "nagaram"));
